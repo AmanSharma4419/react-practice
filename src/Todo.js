@@ -28,7 +28,6 @@ class Todo extends React.Component {
 
     return (
       <div>
-
         <Header name="Todos" />
 
         <h1 className={headingClass}>Todos</h1>

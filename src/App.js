@@ -1,12 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route,Switch } from "react-router-dom";
 
-import Todo from "./Todo";
-import Counter from "./counter";
-import Login from "./login";
-import Home from "./Home";
-
+// import Todo from "./Todo";
+// import Counter from "./counter";
+// import Login from "./login";
+// import Home from "./Home";
+// import Register from "./register";
+// import Fetch from "./fetch";
+// import Book from "./Addbooks"
+  import Component from "./Controlledcomponent"
 import "./App.css";
+import Controlled from "./Controlledcomponent";
+// import ShowBook from "./Showbooks"
 
 class App extends React.Component {
   constructor(props) {
@@ -16,30 +21,31 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount = () => {
-    let isLoggedIn = localStorage.getItem("login");
-    if(isLoggedIn === "true") this.setState({isLoggedIn: true});
+  // componentDidMount = () => {
+  //   let isLoggedIn = localStorage.getItem("login");
+    // if(isLoggedIn === "true") this.setState({isLoggedIn: true});
     // else this.setState({isLoggedIn: false});
-  } 
+  // } 
 
-  handleLogin = () => {
-    this.setState({isLoggedIn: true});
-  }
+  // handleLogin = () => {
+  //   this.setState({isLoggedIn: true});
+  // }
 
   render() {
 
     return (
       <div>
-
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component={() => this.state.isLoggedIn ? <Home /> : <Login loginUser={this.handleLogin} />} />
-            {/* <Route path="/" exact component={this.state.isLoggedIn ? Home : Login} /> */}
-            <Route path="/counter" component={Counter} />
-            <Route path="/todo" component={Todo} />
-          </Switch>
-        </BrowserRouter>
-
+        <Controlled />
+        {/* <BrowserRouter> */}
+           {/* <Switch> */}
+              {/* <Route path="/" exact component={() => this.state.isLoggedIn ? <Home /> : <Login loginUser={this.handleLogin} />} /> */}
+              {/* <Route path="/" exact component={this.state.isLoggedIn ? Home : Login} /> */}
+              {/* <Route path="/register" exact component={Register} />
+              <Route path="/todo" component={Todo} />
+              <Route path="/counter" counter={Counter} />
+              <Route component = {Home} /> */}
+            {/* </Switch> */}
+        {/* </BrowserRouter> */}
       </div>
     );
   }

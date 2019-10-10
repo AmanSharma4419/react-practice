@@ -15,7 +15,7 @@ class Home extends React.Component {
         return (
             <div>
                 <Link to="/todo"><button>Todo</button></Link>
-                <Link to="/counter"><button>Counter</button></Link>
+                <Link to="/register"><button>Counter</button></Link>
             </div>
         );
     }
